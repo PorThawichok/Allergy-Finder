@@ -34,7 +34,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("หน้าลืมรหัสผ่าน");
+        getSupportActionBar().setTitle("Forget Password page");
 
         send_email = findViewById(R.id.send_email);
         btn_reset = findViewById(R.id.btn_reset);
@@ -79,7 +79,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         String email = send_email.getText().toString();
 
         if (checkReset(email)) {
-            Toast.makeText(ForgetPasswordActivity.this, "กรุณากรอกอีเมลล์ก่อน", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ForgetPasswordActivity.this, "Please enter your email.", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -95,10 +95,10 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                                 User user = document.toObject(User.class);
 
                                 txt_password.setVisibility(View.VISIBLE);
-                                txt_password.setText("รหัสของคุณคือ : " + user.password);
+                                txt_password.setText("You password is: " + user.password);
                             }
                         } else {
-                            Toast.makeText(ForgetPasswordActivity.this, "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ForgetPasswordActivity.this, "Something wrong, Please try again", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }

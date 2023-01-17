@@ -239,58 +239,58 @@ public class EditUserActivity extends AppCompatActivity {
         double mbr = 0;
 
         if (checkEmail(Email)) {
-            edt_email.setError("กรุณาใส่อีเมลล์ก่อน");
+            edt_email.setError("Please enter your email");
             edt_email.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            edt_email.setError("กรุณาตรวจสอบอีเมลล์ก่อน !!!");
+            edt_email.setError("Please check your email !!!");
             edt_email.requestFocus();
             return;
         }
 
         if (checkPassword(Password)) {
-            edt_password.setError("กรุณาใส่รหัสผ่านก่อน");
+            edt_password.setError("Please enter your password");
             edt_password.requestFocus();
             return;
         }
 
         if (checkName(Name)) {
-            edt_name.setError("กรุณาใส่ชื่อผู้ใช้ก่อน");
+            edt_name.setError("Please enter your name");
             edt_name.requestFocus();
             return;
         }
 
         if (checkAge(Age)) {
-            edt_age.setError("กรุณาใส่อายุก่อน");
+            edt_age.setError("Please enter your age");
             edt_age.requestFocus();
             return;
         }
 
         if (checkAgeNumber(Age)) {
-            edt_age.setError("กรุณาเช็คอายุก่อน");
+            edt_age.setError("Please check your age");
             edt_age.requestFocus();
             return;
         }
         if (checkHeight(Height)) {
-            edt_height.setError("กรุณาใส่ส่วนสูงก่อน");
+            edt_height.setError("Please enter your height");
             edt_height.requestFocus();
             return;
         }
 
         if (checkHeightNumber(Height)) {
-            edt_height.setError("กรุณาเช็คส่วนสูงก่อน");
+            edt_height.setError("Please check your height");
             edt_height.requestFocus();
             return;
         }
         if (checkWeight(Weight)) {
-            edt_weight.setError("กรุณาใส่น้ำหนักก่อน");
+            edt_weight.setError("Please enter your weight");
             edt_weight.requestFocus();
             return;
         }
         if (checkWeightNumber(Weight)) {
-            edt_weight.setError("กรุณาเช็คน้ำหนักก่อน");
+            edt_weight.setError("Please check your weight");
             edt_weight.requestFocus();
             return;
         }
@@ -298,7 +298,7 @@ public class EditUserActivity extends AppCompatActivity {
         String gluten, lactose, nut, shellfish, corn, fluctose, vegan, no_sugar;
 
         if (!radio1.isChecked() && !radio2.isChecked() && !radio3.isChecked() && !radio4.isChecked() && !radio5.isChecked()) {
-            Toast.makeText(this, "กรุณาเลือกการออกกำลังกายก่อน", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select exercise behavior", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -449,7 +449,7 @@ public class EditUserActivity extends AppCompatActivity {
             appPreferences.setIntPrefs(AppPreferences.KEY_DAILY_FAT, Integer.parseInt(String.format("%.0f", fat)));
             appPreferences.setIntPrefs(AppPreferences.KEY_DAILY_SUGAR, Integer.parseInt(String.format("%.0f", sugar)));
 
-            Toast.makeText(EditUserActivity.this, "แก้ไขข้อมูลสำเร็จ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditUserActivity.this, "Information updated", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(EditUserActivity.this, MainUserActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("from", "edituser");

@@ -98,46 +98,46 @@ public class UserAddActivity1 extends AppCompatActivity {
         String Gender = spinner_gender.getSelectedItem().toString().trim();
 
         if (Email.isEmpty()) {
-            edt_email.setError("กรุณาใส่อีเมลล์ก่อน");
+            edt_email.setError("Please enter your email");
             edt_email.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            edt_email.setError("กรุณาตรวจสอบอีเมลล์ก่อน");
+            edt_email.setError("Please check your email");
             edt_email.requestFocus();
             return;
         }
 
         if (Name.isEmpty()) {
-            edt_name.setError("กรุณาใส่ชื่อผู้ใช้ก่อน");
+            edt_name.setError("Please enter your name");
             edt_name.requestFocus();
             return;
         }
         if (Password.isEmpty()) {
-            edt_password.setError("กรุณาใส่รหัสผ่านก่อน");
+            edt_password.setError("Please enter your password");
             edt_password.requestFocus();
             return;
         }
         if (Password.length() < 6) {
-            edt_password.setError("รหัสผ่านต้องไม่น้อยกว่า 6 ตัว");
+            edt_password.setError("Password must be at least 6 characters");
             edt_password.requestFocus();
             return;
         }
         if (Age.isEmpty()) {
-            edt_age.setError("กรุณาใส่อายุก่อน");
+            edt_age.setError("Please enter your age");
             edt_age.requestFocus();
             return;
         }
 
         if (Height.isEmpty()) {
-            edt_height.setError("กรุณาตรวจสอบเบอร์โทรก่อน");
+            edt_height.setError("Please check your height");
             edt_height.requestFocus();
             return;
         }
 
         if (Weight.isEmpty()) {
-            edt_weight.setError("กรุณาตรวจสอบเบอร์โทรก่อน");
+            edt_weight.setError("Please check your weight");
             edt_weight.requestFocus();
             return;
         }
@@ -149,7 +149,7 @@ public class UserAddActivity1 extends AppCompatActivity {
 
     public void Register(String email, String password, String name, String age, String height, String weight, String gender, Context context) {
         final ProgressDialog pd = new ProgressDialog(context);
-        pd.setMessage("กรุณารอสักครู่...");
+        pd.setMessage("One Moment...");
         pd.show();
 
         pd.dismiss();

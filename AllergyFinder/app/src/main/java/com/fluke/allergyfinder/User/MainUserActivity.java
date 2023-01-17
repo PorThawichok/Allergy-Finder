@@ -54,10 +54,10 @@ public class MainUserActivity extends AppCompatActivity {
         String From = tt.getStringExtra("from");
         if (From.equals("edituser")) {
             selectedFragment = AccountFragment.newInstance();
-            getSupportActionBar().setTitle("บัญชี");
+            getSupportActionBar().setTitle("Account");
         } else {
             selectedFragment = HomeFragment.newInstance();
-            getSupportActionBar().setTitle("หน้าหลัก");
+            getSupportActionBar().setTitle("Main");
         }
 
         bottomBar = findViewById(R.id.bottomBar);
@@ -90,11 +90,11 @@ public class MainUserActivity extends AppCompatActivity {
 
     private void Logout() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(MainUserActivity.this);
-        dialog.setTitle("แจ้งเตือน");
+        dialog.setTitle("Alert");
         dialog.setIcon(android.R.drawable.btn_star_big_on);
         dialog.setCancelable(true);
-        dialog.setMessage("คุณต้องการที่จะออกจากแอพใช่หรือไม่?");
-        dialog.setPositiveButton("ใช่", new DialogInterface.OnClickListener() {
+        dialog.setMessage("Do you want to exit?");
+        dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Intent logout = new Intent(MainUserActivity.this, LoginActivity.class);
                 logout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -103,7 +103,7 @@ public class MainUserActivity extends AppCompatActivity {
             }
         });
 
-        dialog.setNegativeButton("ไม่", new DialogInterface.OnClickListener() {
+        dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }

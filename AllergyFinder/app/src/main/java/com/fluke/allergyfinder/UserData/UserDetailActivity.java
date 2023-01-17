@@ -83,7 +83,7 @@ public class UserDetailActivity extends AppCompatActivity {
 
         txt_age.setText(Age);
         txt_height.setText(Height + " cm.");
-        txt_weight.setText(Weight + " cm.");
+        txt_weight.setText(Weight + " kg.");
 
         if (!lose.isEmpty()) {
             if (lose.substring(0, 1).equals(",")) {

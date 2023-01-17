@@ -61,25 +61,25 @@ public class LoginActivity extends AppCompatActivity {
         String Password = edt_password.getText().toString().trim();
 
         if (checkEmail(Email)) {
-            edt_email.setError("กรุณาใส่อีเมลล์ก่อน");
+            edt_email.setError("Please enter your email");
             edt_email.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            edt_email.setError("กรุณาตรวจสอบอีเมลล์ก่อน!!!");
+            edt_email.setError("Please check your email!!!");
             edt_email.requestFocus();
             return;
         }
 
         if (checkPassword(Password)) {
-            edt_password.setError("กรุณาใส่รหัสผ่านก่อน");
+            edt_password.setError("Please enter your password");
             edt_password.requestFocus();
             return;
         }
 
         final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
-        pd.setMessage("กรุณารอสักครู่...");
+        pd.setMessage("A moment...");
         pd.show();
 
         if (Utils.isNetworkConnected(LoginActivity.this)) {
@@ -141,7 +141,7 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             } else {
                                 pd.dismiss();
-                                Toast.makeText(LoginActivity.this, "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Something wrong, Please try again", Toast.LENGTH_SHORT).show();
                                 return;
                             }
 
@@ -151,7 +151,7 @@ public class LoginActivity extends AppCompatActivity {
                                     @Override
                                     public void run() {
                                         pd.dismiss();
-                                        Toast.makeText(LoginActivity.this, "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Something wrong, Please try again", Toast.LENGTH_SHORT).show();
                                         return;
                                     }
                                 }, 4000);

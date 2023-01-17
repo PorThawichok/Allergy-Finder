@@ -202,52 +202,52 @@ public class UserEditActivity extends AppCompatActivity {
         double mbr = 0;
 
         if (Email.isEmpty()) {
-            edt_email.setError("กรุณาใส่อีเมลล์ก่อน");
+            edt_email.setError("Please enter your email");
             edt_email.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            edt_email.setError("กรุณาตรวจสอบอีเมลล์ก่อน !!!");
+            edt_email.setError("Please check you email !!!");
             edt_email.requestFocus();
             return;
         }
 
         if (Name.isEmpty()) {
-            edt_name.setError("กรุณาใส่ชื่อผู้ใช้ก่อน");
+            edt_name.setError("Please enter your name");
             edt_name.requestFocus();
             return;
         }
 
         if (Age.isEmpty()) {
-            edt_age.setError("กรุณาใส่อายุก่อน");
+            edt_age.setError("Please enter your age");
             edt_age.requestFocus();
             return;
         }
 
         if (Integer.parseInt(Age) >= 100) {
-            edt_age.setError("กรุณาเช็คอายุก่อน");
+            edt_age.setError("Please check your age");
             edt_age.requestFocus();
             return;
         }
         if (Height.isEmpty()) {
-            edt_height.setError("กรุณาใส่ส่วนสูงก่อน");
+            edt_height.setError("Please enter your height");
             edt_height.requestFocus();
             return;
         }
 
         if (Integer.parseInt(Height) >= 200) {
-            edt_height.setError("กรุณาเช็คส่วนสูงก่อน");
+            edt_height.setError("Please check your height");
             edt_height.requestFocus();
             return;
         }
         if (Weight.isEmpty()) {
-            edt_weight.setError("กรุณาใส่น้ำหนักก่อน");
+            edt_weight.setError("Please check your weight");
             edt_weight.requestFocus();
             return;
         }
         if (Integer.parseInt(Weight) >= 110) {
-            edt_weight.setError("กรุณาเช็คน้ำหนักก่อน");
+            edt_weight.setError("Please check your weight");
             edt_weight.requestFocus();
             return;
         }
@@ -255,7 +255,7 @@ public class UserEditActivity extends AppCompatActivity {
         String gluten, lactose, nut, shellfish, corn, fluctose, vegan, no_sugar;
 
         if (!radio1.isChecked() && !radio2.isChecked() && !radio3.isChecked() && !radio4.isChecked() && !radio5.isChecked()) {
-            Toast.makeText(this, "กรุณาเลือกการออกกำลังกายก่อน", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select your exercise behavior", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -381,7 +381,7 @@ public class UserEditActivity extends AppCompatActivity {
             FirebaseFirestore db = FirebaseFirestore.getInstance();
             db.collection("user").document(User_id).update(hashMap);
 
-            Toast.makeText(UserEditActivity.this, "แก้ไขข้อมูลสำเร็จ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(UserEditActivity.this, "information updated", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(UserEditActivity.this, MainAdminActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("from", "edituser");

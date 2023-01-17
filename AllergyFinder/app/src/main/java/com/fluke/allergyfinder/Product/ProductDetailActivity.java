@@ -184,7 +184,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                                 }
                             }
                         } else {
-                            Toast.makeText(ProductDetailActivity.this, "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProductDetailActivity.this, "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }

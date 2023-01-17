@@ -80,7 +80,7 @@ public class RegisterActivity2 extends AppCompatActivity {
         String gluten, lactose, nut, shellfish, corn, fluctose, vegan, no_sugar;
 
         if (!radio1.isChecked() && !radio2.isChecked() && !radio3.isChecked() && !radio4.isChecked() && !radio5.isChecked()) {
-            Toast.makeText(this, "กรุณาเลือกการออกกำลังกายก่อน", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select exercise behavior", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -177,7 +177,7 @@ public class RegisterActivity2 extends AppCompatActivity {
         //Toast.makeText(this, String.format("%.0f", carbohydrate) + " " + String.format("%.0f", protein) + " " + String.format("%.0f", fat) + " " + String.format("%.0f", sugar) + " " + String.format("%.0f", calories), Toast.LENGTH_SHORT).show();
 
         final ProgressDialog pd = new ProgressDialog(RegisterActivity2.this);
-        pd.setMessage("กรุณารอสักครู่...");
+        pd.setMessage("A moment...");
         pd.show();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -244,7 +244,7 @@ public class RegisterActivity2 extends AppCompatActivity {
         appPreferences.setIntPrefs(AppPreferences.KEY_DAILY_SUGAR, Integer.parseInt(String.format("%.0f", sugar)));
         appPreferences.setIntPrefs(AppPreferences.KEY_DAILY_SODIUM, 2300);
 
-        Toast.makeText(RegisterActivity2.this, "สมัครสมาชิกสำเร็จ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(RegisterActivity2.this, "Register completed", Toast.LENGTH_SHORT).show();
         pd.dismiss();
         Intent intent = new Intent(RegisterActivity2.this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

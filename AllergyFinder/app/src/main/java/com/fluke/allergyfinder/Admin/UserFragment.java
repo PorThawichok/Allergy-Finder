@@ -133,7 +133,7 @@ public class UserFragment extends Fragment {
                                 Adapter = new UserFragment_Adapter(DataList, getActivity());
                                 recyclerView.setAdapter(Adapter);
                             } else {
-                                Toast.makeText(getActivity(), "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
                                 return;
                             }
                         }
@@ -164,7 +164,7 @@ public class UserFragment extends Fragment {
                                 Adapter = new UserFragment_Adapter(DataList, getActivity());
                                 recyclerView.setAdapter(Adapter);
                             } else {
-                                Toast.makeText(getActivity(), "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
                                 return;
                             }
                         }
@@ -241,11 +241,11 @@ public class UserFragment extends Fragment {
                 @Override
                 public boolean onLongClick(View v) {
                     AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-                    dialog.setTitle("แจ้งเตือน");
+                    dialog.setTitle("Alert");
                     dialog.setIcon(android.R.drawable.btn_star_big_on);
                     dialog.setCancelable(true);
-                    dialog.setMessage("คุณต้องการแก้ไขบัญชีนี้ใช่หรือไม่?");
-                    dialog.setPositiveButton("ใช่", new DialogInterface.OnClickListener() {
+                    dialog.setMessage("Do you want to edit this account?");
+                    dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             Intent tt = new Intent(getActivity(), UserEditActivity.class);
                             tt.putExtra("user_id", model.getUser_id());
@@ -271,7 +271,7 @@ public class UserFragment extends Fragment {
                         }
                     });
 
-                    dialog.setNegativeButton("ไม่", new DialogInterface.OnClickListener() {
+                    dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
                         }

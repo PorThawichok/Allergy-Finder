@@ -52,9 +52,9 @@ public class HomeAdminFragment extends Fragment {
 
         tabLayout = view.findViewById(R.id.tabLayout);
         viewPager = view.findViewById(R.id.viewPager);
-        tabLayout.addTab(tabLayout.newTab().setText("รายวัน"));
-        tabLayout.addTab(tabLayout.newTab().setText("รายเดือน"));
-        tabLayout.addTab(tabLayout.newTab().setText("รายปี"));
+        tabLayout.addTab(tabLayout.newTab().setText("Daily"));
+        tabLayout.addTab(tabLayout.newTab().setText("Monthly"));
+        tabLayout.addTab(tabLayout.newTab().setText("Yearly"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final MyAdminAdapter adapter = new MyAdminAdapter(getActivity(), getChildFragmentManager(), tabLayout.getTabCount());

@@ -97,7 +97,7 @@ public class EatingListActivity extends AppCompatActivity {
                             Adapter = new EatingListActivity_Adapter(DataList, EatingListActivity.this);
                             recyclerView.setAdapter(Adapter);
                         } else {
-                            Toast.makeText(EatingListActivity.this, "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EatingListActivity.this, "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }
@@ -157,16 +157,16 @@ public class EatingListActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     User data = document.toObject(User.class);
-                                    holder.txt_name.setText("คนทาน : " + data.getName());
+                                    holder.txt_name.setText("Name: " + data.getName());
                                 }
                             }
                         }
                     });
 
             if (model.getDay().equals(Utils.dateThai(new SimpleDateFormat("dd-MM-yyyy").format(new Date())))) {
-                holder.txt_day_time.setText("วันที่ : " + model.getTime());
+                holder.txt_day_time.setText("Date : " + model.getTime());
             } else {
-                holder.txt_day_time.setText("เวลา : " + model.getDay());
+                holder.txt_day_time.setText("Time : " + model.getDay());
             }
         }
 
