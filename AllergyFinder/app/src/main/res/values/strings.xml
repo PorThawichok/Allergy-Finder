@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Allergy Finder</string>
+
+    <string-array name="gender_type">
+        <item>Male</item>
+        <item>Female</item>
+
+    </string-array>
+
+    <string-array name="product_type">
+        <item>อาหาร</item>
+        <item>เครื่องเขียน</item>
+        <item>น้ำดื่ม</item>
+        <item>เครื่องใช้ไฟฟ้า</item>
+        <item>เครื่องนอน</item>
+        <item>เฟอร์นิเจอร์</item>
+        <item>การเงิน</item>
+        <item>แก้ว</item>
+        <item>เครื่องปรุงรส</item>
+    </string-array>
+</resources>

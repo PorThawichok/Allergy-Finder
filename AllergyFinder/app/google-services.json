@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "497096666725",
+    "project_id": "allergyfinder-4c9cc",
+    "storage_bucket": "allergyfinder-4c9cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497096666725:android:ae9c316e6de1f52b7f208c",
+        "android_client_info": {
+          "package_name": "com.fluke.allergyfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497096666725-2mmuna89v4jmv9neark2htg4dtns8lmb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fluke.allergyfinder",
+            "certificate_hash": "4b142a9207f448ec865925d4c20185ae87f8f44e"
+          }
+        },
+        {
+          "client_id": "497096666725-fgj4h2ifi0lshjh3dse7d248eov577s4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1552zCTMWfDfGuMX__yz8Xr01PxDoLtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497096666725-fgj4h2ifi0lshjh3dse7d248eov577s4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

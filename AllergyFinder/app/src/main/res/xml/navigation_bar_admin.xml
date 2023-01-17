@@ -1,0 +1,27 @@
+<tabs>
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_home"
+        id="@+id/nav_home"
+        title="Home" />
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_product"
+        id="@+id/nav_product"
+        title="Product" />
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_contact"
+        id="@+id/nav_user"
+        title="User" />
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_user"
+        id="@+id/nav_account"
+        title="Account" />
+
+</tabs>

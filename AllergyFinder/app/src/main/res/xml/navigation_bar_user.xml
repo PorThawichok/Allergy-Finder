@@ -1,0 +1,31 @@
+<tabs>
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_user"
+        id="@+id/nav_profile"
+        title="Profile" />
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_search"
+        id="@+id/nav_search"
+        title="Search" />
+
+    <tab
+        id="@+id/nav_scan"
+        title="" />
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_bookmark"
+        id="@+id/nav_bookmark"
+        title="Save" />
+
+    <tab
+        activeColor="@color/colorPink"
+        icon="@drawable/ic_graph"
+        id="@+id/nav_track"
+        title="Track" />
+
+</tabs>
