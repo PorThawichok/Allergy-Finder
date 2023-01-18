@@ -131,7 +131,7 @@ public class SearchFragment1 extends Fragment {
                                 Adapter = new SearchFragment1_Adapter(DataList, getActivity());
                                 recyclerView.setAdapter(Adapter);
                             } else {
-                                Toast.makeText(getActivity(), "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Something wrong, Please try again", Toast.LENGTH_SHORT).show();
                                 return;
                             }
                         }
@@ -160,7 +160,7 @@ public class SearchFragment1 extends Fragment {
                                 Adapter = new SearchFragment1_Adapter(DataList, getActivity());
                                 recyclerView.setAdapter(Adapter);
                             } else {
-                                Toast.makeText(getActivity(), "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Something wrong, Please try again", Toast.LENGTH_SHORT).show();
                                 return;
                             }
                         }
@@ -205,10 +205,10 @@ public class SearchFragment1 extends Fragment {
             }
 
             if (lose) {
-                holder.txt_allergy.setText("แพ้");
+                holder.txt_allergy.setText("Avoid");
                 holder.txt_allergy.setBackgroundColor(getResources().getColor(R.color.colorRed));
             } else {
-                holder.txt_allergy.setText("ไม่แพ้");
+                holder.txt_allergy.setText("Good");
                 holder.txt_allergy.setBackgroundColor(getResources().getColor(R.color.colorGreen));
             }
 

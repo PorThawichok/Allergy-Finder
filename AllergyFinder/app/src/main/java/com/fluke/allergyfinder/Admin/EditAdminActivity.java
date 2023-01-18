@@ -118,37 +118,37 @@ public class EditAdminActivity extends AppCompatActivity {
         String Gender = spinner_gender.getSelectedItem().toString().trim();
 
         if (Email.isEmpty()) {
-            edt_email.setError("กรุณาใส่อีเมลล์ก่อน");
+            edt_email.setError("Please input your email first");
             edt_email.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
-            edt_email.setError("กรุณาตรวจสอบอีเมลล์ก่อน !!!");
+            edt_email.setError("Please check your email !!!");
             edt_email.requestFocus();
             return;
         }
 
         if (Password.isEmpty()) {
-            edt_password.setError("กรุณาใส่รหัสผ่านก่อน");
+            edt_password.setError("Please input your password first");
             edt_password.requestFocus();
             return;
         }
 
         if (Name.isEmpty()) {
-            edt_name.setError("กรุณาใส่ชื่อผู้ใช้ก่อน");
+            edt_name.setError("Please input your name.");
             edt_name.requestFocus();
             return;
         }
 
         if (Age.isEmpty()) {
-            edt_age.setError("กรุณาใส่อายุก่อน");
+            edt_age.setError("Please input your age.");
             edt_age.requestFocus();
             return;
         }
 
         if (Integer.parseInt(Age) >= 100) {
-            edt_age.setError("กรุณาเช็คอายุก่อน");
+            edt_age.setError("Please check your age.");
             edt_age.requestFocus();
             return;
         }

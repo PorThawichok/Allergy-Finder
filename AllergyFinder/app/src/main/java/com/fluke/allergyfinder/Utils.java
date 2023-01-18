@@ -42,7 +42,7 @@ public class Utils {
         if (cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected()) {
             return true;
         } else {
-            Toast.makeText(context, "กรุณาเชื่อมต่ออินเทอร์เน็ตก่อน", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Please connect the internet", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
@@ -97,7 +97,7 @@ public class Utils {
 
     public static void showProgress(Context context) {
         final ProgressDialog pd = new ProgressDialog(context);
-        pd.setMessage("กรุณารอสักครู่...");
+        pd.setMessage("A moment...");
         pd.show();
     }
 
@@ -155,9 +155,9 @@ public class Utils {
 
     public static String getYear(String strDate) {
         String Months[] = {
-                "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.",
-                "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.",
-                "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."};
+                "Jan", "Feb", "March", "April",
+                "May", "June", "July", "Aug",
+                "Sep", "Oct", "Nov", "Dec"};
 
         DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 
@@ -216,11 +216,11 @@ public class Utils {
 
     public static void Logout(Context context) {
         AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-        dialog.setTitle("แจ้งเตือน");
+        dialog.setTitle("Alert");
         dialog.setIcon(android.R.drawable.btn_star_big_on);
         dialog.setCancelable(true);
-        dialog.setMessage("คุณต้องการที่จะออกจากระบบใช่หรือไม่?");
-        dialog.setPositiveButton("ใช่", new DialogInterface.OnClickListener() {
+        dialog.setMessage("Do you want to logout?");
+        dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 new AppPreferences(context).clearPrefs(); // clear session login
 
@@ -230,7 +230,7 @@ public class Utils {
             }
         });
 
-        dialog.setNegativeButton("ไม่", new DialogInterface.OnClickListener() {
+        dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }
@@ -240,11 +240,11 @@ public class Utils {
 
     public static void noSession(Context context) {
         AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-        dialog.setTitle("แจ้งเตือน");
+        dialog.setTitle("Alert");
         dialog.setIcon(android.R.drawable.btn_star_big_on);
         dialog.setCancelable(true);
-        dialog.setMessage("คุณยังไม่ได้เข้าสู่ระบบ กรุณาล็อกอินก่อน");
-        dialog.setPositiveButton("ใช่", new DialogInterface.OnClickListener() {
+        dialog.setMessage("Please login first");
+        dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 new AppPreferences(context).clearPrefs(); // clear session login
 
@@ -258,7 +258,7 @@ public class Utils {
 
     public static void AddEmployee(String email, String password, String name, String tel, Context context) {
         final ProgressDialog pd = new ProgressDialog(context);
-        pd.setMessage("กรุณารอสักครู่...");
+        pd.setMessage("A moment...");
         pd.show();
 
 //        FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();

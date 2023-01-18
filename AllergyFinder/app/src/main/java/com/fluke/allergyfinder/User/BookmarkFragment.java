@@ -100,7 +100,7 @@ public class BookmarkFragment extends Fragment {
                             Adapter = new BookmarkFragment_Adapter(DataList, getActivity());
                             recyclerView.setAdapter(Adapter);
                         } else {
-                            Toast.makeText(getActivity(), "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }
