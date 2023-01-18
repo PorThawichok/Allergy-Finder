@@ -204,7 +204,7 @@ public class ProductEditActivity extends AppCompatActivity {
                                 }
                             }
                         } else {
-                            Toast.makeText(ProductEditActivity.this, "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProductEditActivity.this, "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }
@@ -266,43 +266,43 @@ public class ProductEditActivity extends AppCompatActivity {
         final String Sodium = edt_sodium.getText().toString().trim();
 
         if (Barcode.isEmpty()) {
-            edt_barcode.setError("กรุณาใส่รหัสบาร์โค้ดก่อน");
+            edt_barcode.setError("Please input barcode first");
             edt_barcode.requestFocus();
             return;
         }
 
         if (Calories.isEmpty()) {
-            edt_calories.setError("กรุณาใส่ชื่อสินค้าก่อน");
+            edt_calories.setError("Please input Calorie first");
             edt_calories.requestFocus();
             return;
         }
 
         if (Fat.isEmpty()) {
-            edt_fat.setError("Please enter fat yet");
+            edt_fat.setError("Please input Fat");
             edt_fat.requestFocus();
             return;
         }
 
         if (Sugar.isEmpty()) {
-            edt_sugar.setError("Please enter sugar yet");
+            edt_sugar.setError("Please input Sugar");
             edt_sugar.requestFocus();
             return;
         }
 
         if (Protein.isEmpty()) {
-            edt_protein.setError("กรุณาใส่ชื่อสินค้าก่อน");
+            edt_protein.setError("Please input Protein");
             edt_protein.requestFocus();
             return;
         }
 
         if (Carbohydrate.isEmpty()) {
-            edt_carbohydrate.setError("กรุณาใส่ชื่อสินค้าก่อน");
+            edt_carbohydrate.setError("Please input Carbohydrate");
             edt_carbohydrate.requestFocus();
             return;
         }
 
         if (Sodium.isEmpty()) {
-            edt_sodium.setError("กรุณาใส่ชื่อสินค้าก่อน");
+            edt_sodium.setError("Please input Sodium");
             edt_sodium.requestFocus();
             return;
         }
@@ -348,7 +348,7 @@ public class ProductEditActivity extends AppCompatActivity {
 
         final ProgressDialog pDialog = new ProgressDialog(ProductEditActivity.this); //ประกาศ ProgressDialog
         pDialog.setCancelable(true);
-        pDialog.setMessage("กรุณารอสักครู่ ...");
+        pDialog.setMessage("Moment ...");
         pDialog.show();
 
         if (picturePath.equals("")) {
@@ -369,7 +369,7 @@ public class ProductEditActivity extends AppCompatActivity {
             pDialog.dismiss();
             finish();
 
-            Toast.makeText(ProductEditActivity.this, "แก้ไขสินค้าสำเร็จ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ProductEditActivity.this, "Product edit complete", Toast.LENGTH_SHORT).show();
             Intent tt = new Intent(ProductEditActivity.this, MainAdminActivity.class);
             tt.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             tt.putExtra("from", "");
@@ -390,7 +390,7 @@ public class ProductEditActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
                     Log.i("error", exception.getMessage());
-                    Toast.makeText(ProductEditActivity.this, "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ProductEditActivity.this, "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
                 }
             }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -418,7 +418,7 @@ public class ProductEditActivity extends AppCompatActivity {
                             pDialog.dismiss();
                             finish();
 
-                            Toast.makeText(ProductEditActivity.this, "แก้ไขสินค้าสำเร็จ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProductEditActivity.this, "Product edit complete", Toast.LENGTH_SHORT).show();
                             Intent tt = new Intent(ProductEditActivity.this, MainAdminActivity.class);
                             tt.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             tt.putExtra("from", "");

@@ -282,7 +282,7 @@ public class AccountFragment extends Fragment {
 
                         Utils.hideProgress(getActivity());
                     } else {
-                        Toast.makeText(getContext(), "เกิดข้อผิดพลาด", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Something wrong", Toast.LENGTH_SHORT).show();
                         Utils.hideProgress(getActivity());
                     }
                 }
@@ -294,7 +294,7 @@ public class AccountFragment extends Fragment {
                 }
             });
         } else {
-            Toast.makeText(getContext(), "คุณยังไม่ได้เลือกรูป", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please select picture", Toast.LENGTH_SHORT).show();
         }
     }
 }
