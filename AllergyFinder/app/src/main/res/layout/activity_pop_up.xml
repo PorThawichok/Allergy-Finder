@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="คำเตือน"
+                android:text="Warnning"
                 android:textColor="@android:color/black"
                 android:textSize="21dp"
                 android:textStyle="bold" />
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="อาหารนี้มีสารอาหารที่เกินต่อปริมาณต่อวันหรืออาการแพ้บางอย่างของคุณ"
+                android:text="This product contains excessive amounts of certain nutrients or ingredients that may trigger an allergic reaction."
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="คุณต้องการรับประทานอาหารนี้ต่อหรือไม่?"
+                android:text="Do you want to proceed ?"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
@@ -54,7 +54,7 @@
                     android:id="@+id/txt_header1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="สารอาหารที่เกินต่อวันแล้ว :"
+                    android:text="Excessiv Nutreints  :"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -71,7 +71,7 @@
                     android:id="@+id/txt_header2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="สารอาหารที่แพ้ :"
+                    android:text="Allergic Ingredients :"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />

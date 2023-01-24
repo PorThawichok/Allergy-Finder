@@ -37,7 +37,7 @@
                         android:layout_height="wrap_content"
                         android:ems="4"
                         android:inputType="textMultiLine"
-                        android:text="แครอลี่ :"
+                        android:text="Calories :"
                         android:textColor="#000000"
                         android:textSize="16dp" />
 
@@ -62,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:ems="4"
-                        android:text="คนทาน :"
+                        android:text="User :"
                         android:textColor="#000000"
                         android:textSize="16dp" />
 
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:ems="4"
-                        android:text="เดือน :"
+                        android:text="Month :"
                         android:textColor="@android:color/holo_red_light"
                         android:textSize="16dp" />
 
